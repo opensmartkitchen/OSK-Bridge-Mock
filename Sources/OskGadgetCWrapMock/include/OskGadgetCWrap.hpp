@@ -14,6 +14,7 @@ extern "C" {
     
     // Class Methods()
     float oskGadgetGetScaleWeight(void* oskGadget);
+    long oskGadgetGetLastTimestamp(void* oskGadget);
 
 #ifdef __cplusplus
 }

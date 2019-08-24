@@ -16,6 +16,7 @@ public:
     
     // Data Functions()
     float getScaleWeight();
+    long getScaleLastTimestamp();
     
 private:
     // Data Members
@@ -24,6 +25,7 @@ private:
     
     // Data Members: Scale
     float scaleWeigth;
+    int scaleTimestampIdx;
     // items
 
     // Data Functions()

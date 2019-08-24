@@ -3,6 +3,7 @@
 OSKgadget::OSKgadget() 
 {
     scaleWeigth = 2.2f; // :TODO:!!!: temporary test value of 2.2 pounds.
+    scaleTimestampIdx = 0;
 }
 
 OSKgadget::~OSKgadget() {
@@ -12,16 +13,32 @@ OSKgadget::~OSKgadget() {
 // getScaleWeight
 float OSKgadget::getScaleWeight() {
     if (scaleWeigth > 1.0f) {
-       scaleWeigth = 0;
+        scaleWeigth = 0;
     }
     else {
-       scaleWeigth = 2.2f; 
+        scaleWeigth = 2.2f; 
     }
-
+    
     return scaleWeigth;
 }
 
-// getScaleImage
+int mockTimestampArray[] = {
+    1566679707,
+    1566679708,
+    1566679728,
+    1566679729,
+    1566679735,
+    1566679736,
+    1566679742,
+    1566679743
+};
 
-// getScaleItems 
-
+// getScaleTimestamp
+long OSKgadget::getScaleLastTimestamp() {
+    scaleTimestampIdx = scaleTimestampIdx + 1;
+    if (scaleTimestampIdx > 7) {
+        scaleTimestampIdx = 0;
+    }
+    
+    return mockTimestampArray[scaleTimestampIdx];
+}

@@ -24,6 +24,12 @@ extern "C" {
         OSKgadget* ptr = (OSKgadget *)oskGadget;
         return ptr->getScaleWeight();
     }
+
+    long oskGadgetGetLastTimestamp(void* oskGadget) {
+        //OSKgadget* ptr = static_cast<OSKgadget *>(oskGadget);
+        OSKgadget* ptr = (OSKgadget *)oskGadget;
+        return ptr->getScaleLastTimestamp();
+    }
     
 };
 
