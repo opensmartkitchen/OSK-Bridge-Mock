@@ -8,3 +8,7 @@ guard var oskGadget = oskGadgetCreate() else {
 }
 
 print(oskGadgetGetScaleWeight(oskGadget))
+print(oskGadgetGetScaleWeight(oskGadget))
+print(oskGadgetGetScaleWeight(oskGadget))
+print(oskGadgetGetScaleWeight(oskGadget))
+print(oskGadgetGetScaleWeight(oskGadget))
