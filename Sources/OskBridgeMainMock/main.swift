@@ -5,39 +5,41 @@ import Foundation
 import OskGadgetCWrapMock
 
 /* ***********************
-20190824_134827_weight.csv
-20190824_134828_weight.csv
-20190824_134848_weight.csv
-20190824_134849_weight.csv
-20190824_134855_weight.csv
-20190824_134856_weight.csv
-20190824_134902_weight.csv
-20190824_134903_weight.csv
+ 20190824134827_weight.csv
+ 20190824134827_image.png
  
-1566679707
-1566679708
-1566679728
-1566679729
-1566679735
-1566679736
-1566679742
-1566679743
-*********************** */
+ 20190824134828_weight.csv
+ 20190824134848_weight.csv
+ 20190824134849_weight.csv
+ 20190824134855_weight.csv
+ 20190824134856_weight.csv
+ 20190824134902_weight.csv
+ 20190824134903_weight.csv
+ 
+ 1566679707
+ 1566679708
+ 1566679728
+ 1566679729
+ 1566679735
+ 1566679736
+ 1566679742
+ 1566679743
+ *********************** */
 
 let dateListStr = [
-    "20190824_134827",
-    "20190824_134828",
-    "20190824_134848",
-    "20190824_134849",
-    "20190824_134855",
-    "20190824_134856",
-    "20190824_134902",
-    "20190824_134903"
+    "20190824134827",
+    "20190824134828",
+    "20190824134848",
+    "20190824134849",
+    "20190824134855",
+    "20190824134856",
+    "20190824134902",
+    "20190824134903"
 ]
 
 /// - Returns: seconds since 1970.01.01 00:00:00 UTC
 func getUnixEpochSeconds(date dateString: String) -> Int64? {
-    var formatStr = "yyyyMMdd_HHmmss"
+    var formatStr = "yyyyMMddHHmmss"
     let dateFormatter = DateFormatter()
     if dateString.suffix(1) == "z" {
         formatStr.append("'z'")
@@ -61,7 +63,7 @@ func getDateTimeString(unixepoch: Int64, utc: Bool = false) -> String {
     // Note: NSTimeInteral is Double
     let date = Date(timeIntervalSince1970: Double(unixepoch))
     let dateFormatter = DateFormatter()
-    var formatStr = "yyyyMMdd_HHmmss"
+    var formatStr = "yyyyMMddHHmmss"
     if utc {
         formatStr.append("'z'")
     }
