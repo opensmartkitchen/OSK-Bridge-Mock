@@ -1,5 +1,7 @@
 # OSK-Bridge-Mock
 
+_OSK-Bridge-Mock is part of the development software for the [Hackaday ÓSK Squirrel](https://hackaday.io/project/165563-sk-squirrel) project._
+
 _Provides mock hardware API._
 
 <a id="contents"></a>
